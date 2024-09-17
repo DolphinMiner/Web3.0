@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  flex: 1;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.left {
+  width: 300px;
+  padding: 10px;
+  border-right: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.left .previewContainer {
+  width: 200px;
+  height: 200px;
+  box-sizing: content-box;
+  border: 1px solid #000;
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.left .item {
+  height: 30px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  line-height: 30px;
+}
+.left .item .label {
+  width: 100px;
+}
+.left .item .selector {
+  width: 150px;
+  position: relative;
+}
+.left .item .selector select {
+  width: 100%;
+  height: 100%;
+}
+.left .item .selector .clear {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  line-height: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.right {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.right .toolbar {
+  height: 30px;
+  font-size: 0px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.right .content {
+  flex: 1;
+  max-height: calc(100vh - 60px - 20px - 10px - 30px);
+  overflow: auto;
+}
+.right .content .innerContainer {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.toolbar .selector {
+  width: 80px;
+  min-width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  /* margin-right: 5px; */
+}
+.toolbar .selector select {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+}
+.toolbar .button {
+  width: 60px;
+  min-width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.toolbar .button input {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+}
+.toolbar .button input.disabled {
+  cursor: not-allowed;
+}
+.toolbar .button.shuffle {
+  width: 100px;
+  margin-right: 10px;
+}
+.toolbar .button.singleLock {
+  width: 100px;
+  margin-right: 10px;
+}
+.toolbar .button.batchLock {
+  width: 100px;
+  margin-right: auto;
+}
+.toolbar .button.overview {
+  width: 100px;
+}
+
+.innerContainer .previewContainer {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  box-sizing: content-box;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.innerContainer .previewContainer.selected {
+  border-color: blue;
+}
